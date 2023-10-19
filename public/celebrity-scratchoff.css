@@ -6,10 +6,20 @@ box-sizing: border-box;}
   box-sizing: inherit;
 }
 
+body {
+    background: rgb(150, 251, 150);
+}
+
+.intro {
+    text-align: center;
+    color: #02455e;  
+}
+
 .celebrity_scratch-off {
     margin: 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
@@ -26,11 +36,12 @@ box-sizing: border-box;}
 .scratch-card {
     position: relative;
     display: inline-block; /* Ensure the container only takes as much space as needed */
-    width: 15rem; /* Set a fixed width for the container */
-    height: 15rem; /* Set a fixed height for the container */
+    width: 12rem; /* Set a fixed width for the container */
+    height: 12rem; /* Set a fixed height for the container */
     margin: 0.625rem; /* Add margin to separate the cards */
     box-shadow: 0 10px 13px -7px rgba(0,0,0,.4), 0 0 5px 2px transparent;
     cursor: crosshair;
+    
 }
 
 .scratch-mask {
@@ -39,7 +50,10 @@ box-sizing: border-box;}
     left: 0;
     z-index: 1;
     width: 100%; /* Make the canvas cover the entire container */
-    height: 100%;
+    border: black solid 1px;
+    height: 120%;
+    box-shadow: 0 10px 13px -7px rgba(0,0,0,.4), 0 0 5px 2px transparent;
+
 }
 
 .scratch-image {
@@ -53,4 +67,6 @@ box-sizing: border-box;}
 
 .celebrity-info {
     text-align: center;
+    color: #02455e; ;
+    font-weight: bold;
 }

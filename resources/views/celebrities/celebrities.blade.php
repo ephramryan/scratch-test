@@ -9,7 +9,9 @@
 </head>
 <body>
     
-<h1>Celebrities</h1>
+<h1 class="intro">Celebrities</h1>
+
+<p class="intro">Scratch off the blue field to reveal a celebrity!</p>
 
 <div class="celebrity_scratch-off">
     @foreach($celebrities as $celebrity)
@@ -18,8 +20,8 @@
             <canvas class="scratch-mask"></canvas>
             <img class="scratch-image" src="{{ $celebrity->image }}" alt="{{ $celebrity->name }}">
         </div>
-    </figure>
         <div class="celebrity-info">{{ $celebrity->name }}</div>
+    </figure>
     @endforeach
 </div>
 
