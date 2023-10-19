@@ -11,15 +11,17 @@
     
 <h1>Celebrities</h1>
 
-@foreach($celebrities as $celebrity)
-<figure class="scratchOff-container">
-    <div class="scratch-card">
-        <canvas class="scratch-mask"></canvas>
-        <img class="scratch-image" src="{{ $celebrity->image }}" alt="{{ $celebrity->name }}">
-        <figcaption>{{ $celebrity->name }}</figcaption>
-    </div>
-</figure>
-@endforeach
+<div class="celebrity_scratch-off">
+    @foreach($celebrities as $celebrity)
+    <figure class="scratchOff-container">
+        <div class="scratch-card">
+            <canvas class="scratch-mask"></canvas>
+            <img class="scratch-image" src="{{ $celebrity->image }}" alt="{{ $celebrity->name }}">
+        </div>
+    </figure>
+        <div class="celebrity-info">{{ $celebrity->name }}</div>
+    @endforeach
+</div>
 
 <script>
 const scratchCards = document.querySelectorAll('.scratch-card');
@@ -49,7 +51,7 @@ scratchCards.forEach((card) => {
     canvas.addEventListener('mousemove', (e) => {
         if (isScratching) {
             const { offsetX, offsetY } = e;
-            const radius = 20; // Adjust the brush size as needed
+            const radius = 40; // Adjust the brush size as needed
 
             // Clear a circular area to reveal the underlying content
             ctx.globalCompositeOperation = 'destination-out';

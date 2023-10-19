@@ -1,3 +1,21 @@
+html {
+box-sizing: border-box;}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.celebrity_scratch-off {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
 .scratchOff-container {
     display: flex;
     flex-direction: column;
@@ -11,6 +29,8 @@
     width: 300px; /* Set a fixed width for the container */
     height: 300px; /* Set a fixed height for the container */
     margin: 10px; /* Add margin to separate the cards */
+    box-shadow: 0 10px 13px -7px rgba(0,0,0,.4), 0 0 5px 2px transparent;
+    cursor: crosshair;
 }
 
 .scratch-mask {
@@ -29,4 +49,8 @@
     z-index: 0;
     width: 100%; /* Make the image cover the entire container */
     height: 100%;
+}
+
+.celebrity-info {
+    text-align: center;
 }
